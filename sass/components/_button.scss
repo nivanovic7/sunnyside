@@ -1,0 +1,9 @@
+.btn {
+  background-color: var(--grayish-blue);
+  border-radius: 2rem;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--darl-blue);
+  }
+}

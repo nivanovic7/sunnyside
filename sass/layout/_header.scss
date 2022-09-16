@@ -1,0 +1,13 @@
+.header {
+  height: 100vh;
+  padding: 2rem 2rem 0 2rem;
+
+  background-image: url(../images/desktop/image-header.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__arrow-down {
+    height: 8rem;
+  }
+}
