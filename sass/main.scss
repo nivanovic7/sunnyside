@@ -4,7 +4,14 @@
 
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/footer";
 
 @import "abstracts/variables";
 
 @import "components/button";
+@import "components/article";
+@import "components/img";
+@import "components/design-photo-text";
+@import "components/card";
+
+@import "pages/home";

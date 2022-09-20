@@ -1,0 +1,9 @@
+.article {
+  &--text {
+    padding-left: 15rem;
+    padding-right: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

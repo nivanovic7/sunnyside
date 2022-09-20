@@ -1,0 +1,30 @@
+.section {
+  display: flex;
+
+  & > * {
+    flex: 0 1 50%;
+  }
+
+  &--stand-out {
+    flex-direction: row-reverse;
+  }
+
+  &--design-and-photo {
+    & > * {
+      position: relative;
+    }
+  }
+
+  &--testimonials {
+    text-align: center;
+    padding: 20rem 10rem;
+  }
+
+  &--gallery {
+    width: 100%;
+
+    & > * {
+      max-width: 25%;
+    }
+  }
+}

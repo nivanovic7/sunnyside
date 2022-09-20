@@ -7,9 +7,38 @@ body {
 }
 
 .heading-primary {
-  font-family: "Fraunces", serif;
+  font-family: var(--default-heading-font);
   text-transform: uppercase;
   font-size: 8rem;
   color: var(--white);
   letter-spacing: 1rem;
+  color: var(--dark-desaturated-cyan);
+}
+
+.heading-secondary {
+  font-family: var(--default-heading-font);
+
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--dark-desaturated-cyan);
+}
+
+.heading-tertiary {
+  font-family: var(--default-heading-font);
+  font-size: 3.5rem;
+}
+
+.heading-fourth {
+  font-family: var(--default-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 2.5rem;
+  color: var(--dark-grayish-blue);
+}
+
+.paragraph {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark-grayish-blue);
+  line-height: 3rem;
 }

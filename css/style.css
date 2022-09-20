@@ -18,23 +18,54 @@ body {
   line-height: 1.7; }
 
 .heading-primary {
-  font-family: "Fraunces", serif;
+  font-family: var(--default-heading-font);
   text-transform: uppercase;
   font-size: 8rem;
   color: var(--white);
-  letter-spacing: 1rem; }
+  letter-spacing: 1rem;
+  color: var(--dark-desaturated-cyan); }
+
+.heading-secondary {
+  font-family: var(--default-heading-font);
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--dark-desaturated-cyan); }
+
+.heading-tertiary {
+  font-family: var(--default-heading-font);
+  font-size: 3.5rem; }
+
+.heading-fourth {
+  font-family: var(--default-heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 2.5rem;
+  color: var(--dark-grayish-blue); }
+
+.paragraph {
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--dark-grayish-blue);
+  line-height: 3rem; }
 
 .u-margin-top-medium {
   margin-top: 4rem !important; }
 
+.u-margin-bottom-big {
+  margin-bottom: 6rem !important; }
+
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem !important; }
 
 .header {
   height: 100vh;
   padding: 2rem 2rem 0 2rem;
   background-image: url(../images/desktop/image-header.jpg);
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   text-align: center; }
   .header__arrow-down {
@@ -59,6 +90,22 @@ body {
   color: var(--white);
   padding: 0.5rem 1.5rem; }
 
+.navigation__link--contact {
+  background-color: var(--grayish-blue);
+  border-radius: 2rem; }
+  .navigation__link--contact:hover {
+    background-color: var(--white);
+    color: var(--darl-blue); }
+
+.navigation__link--footer:link, .navigation__link--footer:visited {
+  color: var(--dark-desaturated-cyan); }
+
+.footer {
+  text-align: center;
+  padding: 8rem 0; }
+  .footer > :not(:last-child) {
+    margin-bottom: 3rem; }
+
 :root {
   --soft-red: hsl(7, 99%, 70%);
   --dark-desaturated-cyan: hsl(167, 40%, 24%);
@@ -70,11 +117,85 @@ body {
 --very-dark-grayish-blue: hsl(213, 9%, 39%);
   --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
-  --white: hsl(0, 0%, 100%); }
+  --white: hsl(0, 0%, 100%);
+  --default-heading-font: "Fraunces", serif; }
 
 .btn {
-  background-color: var(--grayish-blue);
-  border-radius: 2rem; }
-  .btn:hover {
-    background-color: var(--white);
-    color: var(--darl-blue); }
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  align-self: flex-start;
+  position: relative;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: var(--dark-desaturated-cyan); }
+  .btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1rem;
+    border-radius: 0.5rem;
+    left: -5%;
+    bottom: 0.5rem;
+    z-index: -10;
+    transition: all 0.2s; }
+  .btn--yellow:hover::before {
+    background-color: var(--bg-yellow);
+    width: 110%; }
+  .btn--pink:hover::before {
+    background-color: var(--dark-grayish-blue);
+    width: 110%; }
+
+.article--text {
+  padding-left: 15rem;
+  padding-right: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.img__content {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+.design-photo-text {
+  position: absolute;
+  bottom: 5rem;
+  text-align: center;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; }
+
+.card {
+  text-align: center; }
+  .card__img {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem; }
+  .card__name {
+    font-weight: 900; }
+  .card__position {
+    color: var(--dark-desaturated-cyan); }
+
+.section {
+  display: flex; }
+  .section > * {
+    flex: 0 1 50%; }
+  .section--stand-out {
+    flex-direction: row-reverse; }
+  .section--design-and-photo > * {
+    position: relative; }
+  .section--testimonials {
+    text-align: center;
+    padding: 20rem 10rem; }
+  .section--gallery {
+    width: 100%; }
+    .section--gallery > * {
+      max-width: 25%; }

@@ -1,9 +1,35 @@
 .btn {
-  background-color: var(--grayish-blue);
-  border-radius: 2rem;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  align-self: flex-start;
+  position: relative;
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: var(--dark-desaturated-cyan);
 
-  &:hover {
-    background-color: var(--white);
-    color: var(--darl-blue);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1rem;
+    border-radius: 0.5rem;
+    left: -5%;
+    bottom: 0.5rem;
+    z-index: -10;
+    transition: all 0.2s;
+  }
+
+  &--yellow:hover {
+    &::before {
+      background-color: var(--bg-yellow);
+      width: 110%;
+    }
+  }
+
+  &--pink:hover {
+    &::before {
+      background-color: var(--dark-grayish-blue);
+      width: 110%;
+    }
   }
 }
