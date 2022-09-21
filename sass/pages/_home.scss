@@ -26,18 +26,25 @@
   &--testimonials {
     text-align: center;
     padding: 20rem 10rem;
-    flex-direction: column-reverse;
 
-    @include respond(port-land) {
+    @include respond(tab-land) {
       padding: 10rem 4rem;
     }
   }
 
   &--gallery {
     width: 100%;
+    @include respond(tab-land) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
 
     & > * {
       max-width: 25%;
+      @include respond(tab-land) {
+        max-width: 50%;
+      }
     }
   }
 }

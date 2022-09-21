@@ -2,6 +2,11 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card {
@@ -12,6 +17,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  @include respond(tab-land) {
+    width: 90%;
+  }
 
   &__img {
     border-radius: 50%;
