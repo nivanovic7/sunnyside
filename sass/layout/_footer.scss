@@ -1,8 +1,30 @@
 .footer {
   text-align: center;
+  background-color: var(--grayish-blue);
   padding: 8rem 0;
 
   & > :not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  .social {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+    list-style: none;
+
+    a {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 0 1rem;
+        color: var(--dark-moderate-cyan);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
   }
 }

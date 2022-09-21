@@ -1,17 +1,26 @@
 .card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .card {
   text-align: center;
+  max-width: 41rem;
+  width: 33.33333%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
   &__img {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
+  }
+
+  &__text {
+    margin-bottom: auto;
   }
 
   &__name {
