@@ -124,6 +124,41 @@ body {
 .navigation__link--footer:link, .navigation__link--footer:visited {
   color: var(--dark-desaturated-cyan); }
 
+.toggle {
+  display: none; }
+  .toggle span {
+    display: inline-block;
+    width: 90%;
+    height: 2px;
+    border: 3px;
+    background-color: #cec8c3;
+    position: relative; }
+    .toggle span::after, .toggle span::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      background-color: #cec8c3;
+      height: 100%;
+      left: 0; }
+    .toggle span::after {
+      top: -1.2rem; }
+    .toggle span::before {
+      top: 1.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px; } }
+
+@media only screen and (max-width: 56.25em) {
+  .menu {
+    display: none; } }
+
+input {
+  display: hidden; }
+
 .footer {
   text-align: center;
   background-color: var(--grayish-blue);
