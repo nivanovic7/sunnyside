@@ -56,6 +56,7 @@
     height: 2px;
     border: 3px;
     background-color: rgb(206, 200, 195);
+    transition: all 0.2s;
     position: relative;
 
     &::after,
@@ -64,6 +65,7 @@
       position: absolute;
       width: 100%;
       background-color: rgb(206, 200, 195);
+      transition: all 0.2s;
 
       height: 100%;
       left: 0;
@@ -86,6 +88,7 @@
     height: 40px;
   }
 }
+
 .menu {
   @include respond(tab-port) {
     display: none;
@@ -93,5 +96,19 @@
 }
 
 input {
-  display: hidden;
+  display: none;
+}
+
+#chbox:checked ~ .toggle span {
+  background-color: transparent;
+}
+
+#chbox:checked ~ .toggle span::after {
+  rotate: 45deg;
+  top: 0;
+}
+
+#chbox:checked ~ .toggle span::before {
+  rotate: 135deg;
+  top: 0;
 }

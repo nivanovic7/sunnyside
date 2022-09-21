@@ -19,7 +19,8 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 body {
   font-size: 1.8rem;
@@ -132,12 +133,14 @@ body {
     height: 2px;
     border: 3px;
     background-color: #cec8c3;
+    transition: all 0.2s;
     position: relative; }
     .toggle span::after, .toggle span::before {
       content: "";
       position: absolute;
       width: 100%;
       background-color: #cec8c3;
+      transition: all 0.2s;
       height: 100%;
       left: 0; }
     .toggle span::after {
@@ -157,7 +160,18 @@ body {
     display: none; } }
 
 input {
-  display: hidden; }
+  display: none; }
+
+#chbox:checked ~ .toggle span {
+  background-color: transparent; }
+
+#chbox:checked ~ .toggle span::after {
+  rotate: 45deg;
+  top: 0; }
+
+#chbox:checked ~ .toggle span::before {
+  rotate: 135deg;
+  top: 0; }
 
 .footer {
   text-align: center;
@@ -279,6 +293,35 @@ input {
     font-weight: 900; }
   .card__position {
     color: var(--dark-desaturated-cyan); }
+
+.toggle-menu {
+  position: absolute;
+  width: 0;
+  left: 50%;
+  translate: -50%;
+  background-color: var(--white);
+  top: 10rem;
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden; }
+  .toggle-menu ul {
+    list-style: none; }
+  .toggle-menu a:active, .toggle-menu a:link {
+    text-decoration: none;
+    color: var(--dark-blue);
+    display: inline-block;
+    padding: 1rem;
+    font-style: "Barlow", sans-serif;
+    font-weight: 700;
+    width: 100%; }
+  .toggle-menu a:hover {
+    background-color: var(--dark-blue);
+    color: wheat; }
+
+#chbox:checked ~ .toggle-menu {
+  opacity: 1;
+  width: 90%;
+  visibility: visible; }
 
 .section {
   display: flex; }
